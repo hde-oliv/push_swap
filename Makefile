@@ -1,4 +1,4 @@
-SRC		:=
+SRC		:= push_swap.c push_and_swap_instructions.c reverse_rotate_instructions.c rotate_instructions.c
 
 SRC_DIR :=	sources
 INC_DIR :=	headers
@@ -40,7 +40,7 @@ clean:
 
 fclean: 	clean
 			$(MAKE) -C $(LFT_DIR) fclean
-			$(RM) $(SNAME) $(CNAME)
+			$(RM) $(NAME)
 
 re: 		fclean all
 
