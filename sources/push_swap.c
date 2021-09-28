@@ -33,13 +33,11 @@ t_list	*create_stack_a(int list_size, void **list, char mode)
 	return (first);
 }
 
-
 int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
 	char	**list;
 	int		i;
-	//t_list	*stack_b;
 
 	i = 0;
 	if (argc > 2)
@@ -53,5 +51,4 @@ int	main(int argc, char **argv)
 	}
 	else
 		exit(1);
-	ft_lstiter(stack_a, &print_content);
 }

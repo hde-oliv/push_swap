@@ -1,4 +1,4 @@
-SRC		:= push_swap.c push_and_swap_instructions.c reverse_rotate_instructions.c rotate_instructions.c
+SRC		:= push_swap.c ps_inst.c rr_inst.c r_inst.c
 
 SRC_DIR :=	sources
 INC_DIR :=	headers

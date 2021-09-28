@@ -3,15 +3,15 @@
 # include "libft.h"
 
 /* Instructions */
-void	sa(t_list **a);
-void	sb(t_list **b);
-void	ss(t_list **a, t_list **b);
-void	pa(t_list **a, t_list **b);
-void	pb(t_list **a, t_list **b);
-void	ra(t_list **a);
-void	rb(t_list **b);
-void	rr(t_list **a, t_list **b);
-void	rra(t_list **a);
-void	rrb(t_list **b);
-void	rrr(t_list **a, t_list **b);
+void	sa(int ***a);
+void	sb(int ***b);
+void	ss(int ***a, int ***b);
+void	pa(int ***a, int ***b);
+void	pb(int ***a, int ***b);
+void	ra(int ***a);
+void	rb(int ***b);
+void	rr(int ***a, int ***b);
+void	rra(int ***a);
+void	rrb(int ***b);
+void	rrr(int ***a, int ***b);
 #endif
