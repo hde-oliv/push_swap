@@ -1,40 +1,19 @@
+#include "libft.h"
 #include "push_swap.h"
 
-void	shift_one_forward(int ***arr)
+void	shift_one_right(int **stack, int stack_size)
 {
-	int **new;
-	int i;
-
-	i = 0;
-	while ((*arr)[i++])
-		;
-	new = (int **) malloc(sizeof(int *) * (i + 1));
-	i = 0;
-	while ((*arr)[i])
-	{
-		new[i + 1] = (*arr)[i];
-		i++;
-	}
-	// TODO set the null on new
-	free(**arr);
-	arr = &new;
+	ft_memmove((*stack)+ 1, *stack, stack_size - 1);
 }
 
 void	shift_one_back(int ***arr)
 {
-	int **new;
-	int i;
+	(void)arr;
+}
 
-	i = 0;
-	while ((*arr)[i++])
-		;
-	new = (int **) malloc(sizeof(int *) * (i + 1));
-	i = 0;
-	while ((*arr)[i])
-	{
-		new[i] = (*arr)[i + 1];
-		i++;
-	}
-	free(**arr);
-	arr = &new;
+void	err(char *error)
+{
+	ft_putstr_fd("Error: ", 2);
+	ft_putendl_fd(error, 2);
+	exit(1);
 }

@@ -1,16 +1,13 @@
 #include "libft.h"
 #include "push_swap.h"
 
-void	sa(int ***a)
+void	sa(int **a)
 {
-	int	*tmp;
+	int	tmp;
 
-	if (!(*a)[1])
-	{
-		tmp = (*a)[1];
-		(*a)[1] = (*a)[0];
-		(*a)[0] = (*a)[1];
-	}
+	tmp = (*a)[1];
+	(*a)[1] = (*a)[0];
+	(*a)[0] = tmp;
 	write(1, "sa\n", 3);
 }
 
@@ -48,8 +45,12 @@ void	ss(int ***a, int ***b)
 
 void	pa(int ***a, int ***b)
 {
+	(void)a;
+	(void)b;
 }
 
 void	pb(int ***a, int ***b)
 {
+	(void)a;
+	(void)b;
 }

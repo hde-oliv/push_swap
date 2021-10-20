@@ -3,10 +3,12 @@
 
 void	ra(int ***a)
 {
+	(void)a;
 }
 
 void	rb(int ***b)
 {
+	(void)b;
 }
 
 void	rr(int ***a, int ***b)

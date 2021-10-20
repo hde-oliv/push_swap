@@ -1,4 +1,4 @@
-SRC		:= push_swap.c ps_inst.c rr_inst.c r_inst.c
+SRC		:= push_swap.c ps_inst.c rr_inst.c r_inst.c utils.c
 
 SRC_DIR :=	sources
 INC_DIR :=	headers
@@ -29,10 +29,10 @@ LFT_HDR	:=	libft/headers
 all:		obj lft $(NAME)
 
 $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
-			$(CC) $(CFLAGS) -c $< -o $@ $(IFLAGS)/$(INCLS) $(IFLAGS)/$()
+			$(CC) $(CFLAGS) $(TFLAGS) -c $< -o $@ $(IFLAGS)/$(INCLS) $(IFLAGS)/$()
 
 $(NAME):	$(OBJS)
-			$(CC) $(OBJS) $(LFLAGS)/$(LFT_DIR) $(MFLAGS) -o $(NAME)
+			$(CC) $(OBJS) $(TFLAGS) $(LFLAGS)/$(LFT_DIR) $(MFLAGS) -o $(NAME)
 
 clean:
 			$(MAKE) -C $(LFT_DIR) clean
