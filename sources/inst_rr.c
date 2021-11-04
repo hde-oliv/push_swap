@@ -6,7 +6,7 @@
 /*   By: hde-oliv <hde-oliv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 22:25:11 by hde-oliv          #+#    #+#             */
-/*   Updated: 2021/11/03 22:25:12 by hde-oliv         ###   ########.fr       */
+/*   Updated: 2021/11/03 22:36:35 by hde-oliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,13 @@ void	rrb(int **b, int b_size)
 
 void	rrr(int **a, int **b, int a_size, int b_size)
 {
-	rra(a, a_size);
-	rrb(b, b_size);
+	int	tmp;
+
+	tmp = (*a)[a_size - 1];
+	shift_one_right(a, a_size);
+	(*a)[0] = tmp;
+	tmp = (*b)[b_size - 1];
+	shift_one_right(b, b_size);
+	(*b)[0] = tmp;
 	write(1, "rrr\n", 4);
 }

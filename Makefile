@@ -1,4 +1,4 @@
-SRC		:= push_swap.c ps_inst.c rr_inst.c r_inst.c utils.c
+SRC		:=	algorithms.c checker.c constructor.c inst_ps.c inst_r.c inst_rr.c main.c methods.c utils.c
 
 SRC_DIR :=	sources
 INC_DIR :=	headers
@@ -29,7 +29,7 @@ LFT_HDR	:=	libft/headers
 all:		obj lft $(NAME)
 
 $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
-			$(CC) $(CFLAGS) $(TFLAGS) -c $< -o $@ $(IFLAGS)/$(INCLS) $(IFLAGS)/$()
+			$(CC) $(CFLAGS) $(TFLAGS) -c $< -o $@ $(IFLAGS)/$(INCLS)
 
 $(NAME):	$(OBJS)
 			$(CC) $(OBJS) $(TFLAGS) $(LFLAGS)/$(LFT_DIR) $(MFLAGS) -o $(NAME)

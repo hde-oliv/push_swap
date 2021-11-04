@@ -33,7 +33,7 @@ RM		:=	rm -rf
 all:		obj $(NAME)
 
 $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
-			$(CC) $(CFLAGS) -c $< -o $@ $(LFLAGS)/$(INCLS)
+			$(CC) $(CFLAGS) $(TFLAGS) -c $< -o $@ $(LFLAGS)/$(INCLS)
 
 $(NAME):	$(OBJS)
 			$(LIB) $(NAME) $(OBJS)
