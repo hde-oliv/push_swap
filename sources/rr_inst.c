@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rr_inst.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hde-oliv <hde-oliv@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/03 22:25:11 by hde-oliv          #+#    #+#             */
+/*   Updated: 2021/11/03 22:25:12 by hde-oliv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include "push_swap.h"
 
@@ -11,13 +23,19 @@ void	rra(int **a, int a_size)
 	write(1, "rra\n", 4);
 }
 
-void	rrb(int ***b)
+void	rrb(int **b, int b_size)
 {
-	(void)b;
+	int	tmp;
+
+	tmp = (*b)[b_size - 1];
+	shift_one_right(b, b_size);
+	(*b)[0] = tmp;
+	write(1, "rrb\n", 4);
 }
 
-void	rrr(int ***a, int ***b)
+void	rrr(int **a, int **b, int a_size, int b_size)
 {
-	(void)a;
-	(void)b;
+	rra(a, a_size);
+	rrb(b, b_size);
+	write(1, "rrr\n", 4);
 }
