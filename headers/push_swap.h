@@ -6,7 +6,7 @@
 /*   By: hde-oliv <hde-oliv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 22:25:20 by hde-oliv          #+#    #+#             */
-/*   Updated: 2021/11/04 20:25:26 by hde-oliv         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:39:38 by hde-oliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@
 # define REPEATED_ARGS "Repeated arguments."
 
 /* Instructions */
-void	sa(int **a);
-void	sb(int **b);
+void	sa(int **a, int a_size);
+void	sb(int **b, int b_size);
+void	ss(int **a, int **b, int a_size, int b_size);
 void	pa(int **a, int **b, int *a_size, int *b_size);
 void	pb(int **a, int **b, int *a_size, int *b_size);
 void	rra(int **a, int a_size);
