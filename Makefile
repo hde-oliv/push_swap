@@ -1,4 +1,4 @@
-SRC		:=	algorithms.c checker.c constructor.c inst_ps.c inst_r.c inst_rr.c main.c methods.c utils.c
+SRC		:=	algorithms.c algorithms_utils.c checker.c constructor.c inst_ps.c inst_r.c inst_rr.c main.c methods.c utils.c
 
 SRC_DIR :=	sources
 INC_DIR :=	headers

@@ -6,7 +6,7 @@
 /*   By: hde-oliv <hde-oliv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 22:25:20 by hde-oliv          #+#    #+#             */
-/*   Updated: 2021/11/10 20:39:38 by hde-oliv         ###   ########.fr       */
+/*   Updated: 2021/11/16 21:05:32 by hde-oliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ void	rb(int **b, int b_size);
 void	rr(int **a, int **b, int a_size, int b_size);
 
 /* Algorithms */
-void	dumb_sort(int *a, int *b, int a_size, int b_size);
-void	mini_sort(int *a, int a_size);
+void	select_algorithm(int *a, int *b, int a_size, int b_size);
+void	quick_sort(int *a, int *b, int a_size, int b_size);
+void	three_sort(int *a, int a_size);
+void	insertion_sort(int *a, int *b, int a_size, int b_size);
 
 /* Constructors */
 int		*create_stack_a(char **args, int size);
@@ -53,6 +55,9 @@ int		is_sorted(int *stack, int stack_size);
 void	shift_one_right(int **stack, int stack_size);
 void	shift_one_left(int **stack, int stack_size);
 void	err(char *error);
-int		find_lowest_number(int *stack, int stack_size);
 void	print_stack(int *stack, int stack_size);
+int		find_lowest_number(int *stack, int stack_size);
+int 	find_nearest_number(int *stack, int stack_size, int number);
+int		find_biggest_number(int *stack, int stack_size);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: hde-oliv <hde-oliv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 22:25:23 by hde-oliv          #+#    #+#             */
-/*   Updated: 2021/11/04 20:14:09 by hde-oliv         ###   ########.fr       */
+/*   Updated: 2021/11/16 21:05:51 by hde-oliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 	stack_b_size = 0;
 	if (is_sorted(stack_a, stack_a_size))
 		exit(0);
-	dumb_sort(stack_a, stack_b, stack_a_size, stack_b_size);
+	select_algorithm(stack_a, stack_b, stack_a_size, stack_b_size);
 	free(stack_a);
 	free(stack_b);
 }

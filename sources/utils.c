@@ -6,7 +6,7 @@
 /*   By: hde-oliv <hde-oliv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 22:25:06 by hde-oliv          #+#    #+#             */
-/*   Updated: 2021/11/04 20:44:08 by hde-oliv         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:50:13 by hde-oliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,25 +56,4 @@ void	print_stack(int *stack, int stack_size)
 		i++;
 	}
 	ft_putendl_fd("", 1);
-}
-
-int	find_lowest_number(int *stack, int stack_size)
-{
-	int	i;
-	int	lowest;
-	int	lowest_index;
-
-	i = 0;
-	lowest = stack[0];
-	lowest_index = i;
-	while (i < stack_size)
-	{
-		if (stack[i] < lowest)
-		{
-			lowest = stack[i];
-			lowest_index = i;
-		}
-		i++;
-	}
-	return (lowest_index);
 }
