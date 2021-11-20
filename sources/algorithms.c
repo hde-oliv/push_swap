@@ -97,6 +97,7 @@ void	radix_sort(int *a, int *b, int a_size, int b_size)
 
 	j = 0;
 	size = a_size;
+	// TODO: Simplify the array before sorting
 	while (!is_sorted(a, a_size))
 	{
 		i = 0;
