@@ -112,5 +112,4 @@ void	radix_sort(int *a, int *b, int a_size, int b_size)
 			pa(&a, &b, &a_size, &b_size);
 		j++;
 	}
-	print_stack(a, a_size);
 }
