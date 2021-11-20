@@ -6,64 +6,68 @@
 /*   By: hde-oliv <hde-oliv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 20:12:45 by hde-oliv          #+#    #+#             */
-/*   Updated: 2021/11/16 21:02:08 by hde-oliv         ###   ########.fr       */
+/*   Updated: 2021/11/18 08:31:11 by hde-oliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int find_nearest_number(int *stack, int stack_size, int number)
+int	find_number_index(int *stack, int stack_size, int number)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (i < stack_size)
 	{
-		if (stack[i] <= number)
+		if (stack[i] == number)
 			return (i);
 		i++;
 	}
 	return (i);
 }
 
-int	find_lowest_number(int *stack, int stack_size)
+static void	bubble_sort(int **stack, int stack_size)
 {
 	int	i;
-	int	lowest;
-	int	lowest_index;
-
+	int	j;
+	int	temp;
+	
 	i = 0;
-	lowest = stack[0];
-	lowest_index = i;
+	j = 0;
 	while (i < stack_size)
 	{
-		if (stack[i] < lowest)
+		j = 1;
+		while (j < (stack_size - i))
 		{
-			lowest = stack[i];
-			lowest_index = i;
+			if ((*stack)[j] < (*stack)[j - 1])
+			{
+				temp = (*stack)[j];
+				(*stack)[j] = (*stack)[j - 1];
+				(*stack)[j - 1] = temp;
+			}
+			j++;
 		}
 		i++;
 	}
-	return (lowest_index);
 }
 
-int	find_biggest_number(int *stack, int stack_size)
+void	simplify_array(int **stack, int stack_size)
 {
 	int	i;
-	int	biggest;
-	int	biggest_index;
+	int	j;
+	int	*tmp;
+	int	idx;
 
 	i = 0;
-	biggest = stack[0];
-	biggest_index = i;
+	j = 1;
+	tmp = (int *)ft_calloc(stack_size, sizeof(int));
+	ft_memcpy(tmp, (*stack), sizeof(int) * stack_size);
+	bubble_sort(&tmp, stack_size);
 	while (i < stack_size)
 	{
-		if (stack[i] > biggest)
-		{
-			biggest = stack[i];
-			biggest_index = i;
-		}
-		i++;
+		idx = find_number_index(*stack, stack_size, tmp[i]);
+		(*stack)[idx] = j;
+		j++;
+		i++;	
 	}
-	return (biggest_index);
 }

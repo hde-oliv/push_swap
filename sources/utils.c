@@ -17,7 +17,13 @@ void	shift_one_right(int **stack, int stack_size)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
+
+	if (stack_size == 1)
+	{
+		(*stack)[1] = (*stack)[0];
+		return ;
+	}
 	while (i < stack_size)
 	{
 		(*stack)[stack_size - i] = (*stack)[stack_size - i - 1];
@@ -34,7 +40,8 @@ void	shift_one_left(int **stack, int stack_size)
 	{
 		(*stack)[i] = (*stack)[i + 1];
 		i++;
-	}	
+	}
+	(*stack)[stack_size - 1] = 0;
 }
 
 void	err(char *error)

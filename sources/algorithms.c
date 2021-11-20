@@ -6,7 +6,7 @@
 /*   By: hde-oliv <hde-oliv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:45:34 by hde-oliv          #+#    #+#             */
-/*   Updated: 2021/11/17 10:12:12y hde-oliv         ###   ########.fr       */
+/*   Updated: 2021/11/17 10:12:12 by hde-oliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,28 @@ void	select_algorithm(int *a, int *b, int a_size, int b_size)
 	else if (a_size < 7)
 		insertion_sort(a, b, a_size, b_size);
 	else
-		// TODO
+		radix_sort(a, b, a_size, b_size);
+}
+
+int	find_lowest_number(int *stack, int stack_size)
+{
+	int	i;
+	int	lowest;
+	int	lowest_index;
+
+	i = 0;
+	lowest = stack[0];
+	lowest_index = i;
+	while (i < stack_size)
+	{
+		if (stack[i] < lowest)
+		{
+			lowest = stack[i];
+			lowest_index = i;
+		}
+		i++;
+	}
+	return (lowest_index);
 }
 
 void	insertion_sort(int *a, int *b, int a_size, int b_size)
@@ -69,4 +90,27 @@ void	three_sort(int *a, int a_size)
 }
 
 void	radix_sort(int *a, int *b, int a_size, int b_size)
-{}
+{
+	int	i;
+	int	j;
+	int	size;
+
+	j = 0;
+	size = a_size;
+	while (!is_sorted(a, a_size))
+	{
+		i = 0;
+		while (i < size)
+		{
+			if ((((*a) >> j) & 1) == 0)
+				pb(&a, &b, &a_size, &b_size);
+			else
+				ra(&a, a_size);
+			i++;
+		}
+		while (b_size != 0)
+			pa(&a, &b, &a_size, &b_size);
+		j++;
+	}
+	print_stack(a, a_size);
+}

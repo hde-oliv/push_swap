@@ -38,6 +38,7 @@ void	select_algorithm(int *a, int *b, int a_size, int b_size);
 void	quick_sort(int *a, int *b, int a_size, int b_size);
 void	three_sort(int *a, int a_size);
 void	insertion_sort(int *a, int *b, int a_size, int b_size);
+void	radix_sort(int *a, int *b, int a_size, int b_size);
 
 /* Constructors */
 int		*create_stack_a(char **args, int size);
@@ -56,8 +57,8 @@ void	shift_one_right(int **stack, int stack_size);
 void	shift_one_left(int **stack, int stack_size);
 void	err(char *error);
 void	print_stack(int *stack, int stack_size);
+void	simplify_array(int **stack, int stack_size);
+int		find_number_index(int *stack, int stack_size, int number);
 int		find_lowest_number(int *stack, int stack_size);
-int 	find_nearest_number(int *stack, int stack_size, int number);
-int		find_biggest_number(int *stack, int stack_size);
 
 #endif
