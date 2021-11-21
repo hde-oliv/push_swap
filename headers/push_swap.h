@@ -55,7 +55,7 @@ int		is_sorted(int *stack, int stack_size);
 /* Utils */
 void	shift_one_right(int **stack, int stack_size);
 void	shift_one_left(int **stack, int stack_size);
-void	err(char *error);
+void	err(void);
 void	print_stack(int *stack, int stack_size);
 void	simplify_array(int **stack, int stack_size);
 int		find_number_index(int *stack, int stack_size, int number);

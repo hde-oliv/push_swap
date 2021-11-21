@@ -24,7 +24,7 @@ void	check_invalid_arguments(char **args, int size)
 	while (i < size)
 	{
 		if (!is_number(args[i]))
-			err(INVALID_ARGS);
+			err();
 		i++;
 	}
 }
@@ -45,7 +45,7 @@ void	check_repeated_numbers(int **stack, int stack_size)
 			if (arr[i] == arr[k])
 			{
 				free(*stack);
-				err(REPEATED_ARGS);
+				err();
 			}
 			k++;
 		}
@@ -65,7 +65,7 @@ void	xpto(char **args, int size)
 		while (k < size)
 		{
 			if (args[i] == args[k])
-				err(REPEATED_ARGS);
+				err();
 			k++;
 		}
 		i++;
