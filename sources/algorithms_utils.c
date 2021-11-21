@@ -61,6 +61,8 @@ void	simplify_array(int **stack, int stack_size)
 	i = 0;
 	j = 1;
 	tmp = (int *)ft_calloc(stack_size, sizeof(int));
+	if (tmp == NULL)
+		err();
 	ft_memcpy(tmp, (*stack), sizeof(int) * stack_size);
 	bubble_sort(&tmp, stack_size);
 	while (i < stack_size)
