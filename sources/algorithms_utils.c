@@ -30,7 +30,7 @@ static void	bubble_sort(int **stack, int stack_size)
 {
 	int	i;
 	int	j;
-	int	temp;
+	int	tmp;
 
 	i = 0;
 	j = 0;
@@ -41,9 +41,9 @@ static void	bubble_sort(int **stack, int stack_size)
 		{
 			if ((*stack)[j] < (*stack)[j - 1])
 			{
-				temp = (*stack)[j];
+				tmp = (*stack)[j];
 				(*stack)[j] = (*stack)[j - 1];
-				(*stack)[j - 1] = temp;
+				(*stack)[j - 1] = tmp;
 			}
 			j++;
 		}
