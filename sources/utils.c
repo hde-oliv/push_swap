@@ -43,10 +43,9 @@ void	shift_one_left(int **stack, int stack_size)
 	(*stack)[stack_size - 1] = 0;
 }
 
-void	err(char *error)
+void	err(void)
 {
-	ft_putstr_fd("Error: ", 2);
-	ft_putendl_fd(error, 2);
+	ft_putstr_fd("Error\n", 1);
 	exit(1);
 }
 

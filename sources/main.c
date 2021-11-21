@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	int	stack_b_size;
 
 	if (argc < 2)
-		err(MISSING_ARGS);
+		err();
 	check_invalid_arguments(argv, argc);
 	stack_a_size = argc - 1;
 	stack_a = create_stack_a(&(argv[1]), stack_a_size);

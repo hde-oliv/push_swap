@@ -20,7 +20,7 @@ int	*create_stack_a(char **args, int size)
 	i = 0;
 	stack = (int *)ft_calloc(size, sizeof(int));
 	if (stack == NULL)
-		err(INSUFFICIENT_MEMORY);
+		err();
 	while (i < size)
 	{
 		stack[i] = ft_atoi(args[i]);
@@ -35,6 +35,6 @@ int	*create_stack_b(int size)
 
 	stack = (int *)ft_calloc(size, sizeof(int));
 	if (stack == NULL)
-		err(INSUFFICIENT_MEMORY);
+		err();
 	return (stack);
 }
