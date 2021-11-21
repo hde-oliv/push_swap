@@ -14,7 +14,7 @@
 
 int	find_number_index(int *stack, int stack_size, int number)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < stack_size)
@@ -31,7 +31,7 @@ static void	bubble_sort(int **stack, int stack_size)
 	int	i;
 	int	j;
 	int	temp;
-	
+
 	i = 0;
 	j = 0;
 	while (i < stack_size)
@@ -68,6 +68,6 @@ void	simplify_array(int **stack, int stack_size)
 		idx = find_number_index(*stack, stack_size, tmp[i]);
 		(*stack)[idx] = j;
 		j++;
-		i++;	
+		i++;
 	}
 }

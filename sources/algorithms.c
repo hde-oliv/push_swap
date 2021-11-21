@@ -56,7 +56,7 @@ void	insertion_sort(int *a, int *b, int a_size, int b_size)
 		if (a_size == 3)
 		{
 			three_sort(a, a_size);
-			break;
+			break ;
 		}
 		if (lowest_index == 0 && a_size != 1)
 			pb(&a, &b, &a_size, &b_size);
@@ -89,6 +89,7 @@ void	three_sort(int *a, int a_size)
 		ra(&a, a_size);
 }
 
+// TODO: Simplify the array before sorting
 void	radix_sort(int *a, int *b, int a_size, int b_size)
 {
 	int	i;
@@ -97,7 +98,6 @@ void	radix_sort(int *a, int *b, int a_size, int b_size)
 
 	j = 0;
 	size = a_size;
-	// TODO: Simplify the array before sorting
 	while (!is_sorted(a, a_size))
 	{
 		i = 0;

@@ -51,7 +51,6 @@ void	check_repeated_numbers(int **stack, int stack_size)
 		}
 		i++;
 	}
-
 }
 
 void	xpto(char **args, int size)
@@ -72,4 +71,3 @@ void	xpto(char **args, int size)
 		i++;
 	}
 }
-

@@ -18,7 +18,6 @@ void	shift_one_right(int **stack, int stack_size)
 	int	i;
 
 	i = 0;
-
 	if (stack_size == 1)
 	{
 		(*stack)[1] = (*stack)[0];

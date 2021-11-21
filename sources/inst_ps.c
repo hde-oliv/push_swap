@@ -17,7 +17,7 @@ void	sa(int **a, int a_size)
 {
 	int	tmp;
 
-	if (a_size > 1) 
+	if (a_size > 1)
 	{
 		tmp = (*a)[1];
 		(*a)[1] = (*a)[0];
@@ -43,7 +43,7 @@ void	ss(int **a, int **b, int a_size, int b_size)
 {
 	int	tmp;
 
-	if (a_size > 1) 
+	if (a_size > 1)
 	{
 		tmp = (*a)[1];
 		(*a)[1] = (*a)[0];
