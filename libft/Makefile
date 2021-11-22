@@ -25,7 +25,7 @@ LIB		:=	ar rcs
 
 CFLAGS	+=	-Wall -Wextra -Werror
 LFLAGS  += -I.
-TFLAGS	+=	-fsanitize=address -g
+TFLAGS	+=	-g
 RM		:=	rm -rf
 
 
