@@ -14,14 +14,13 @@
 # define PUSH_SWAP_H
 # include "libft.h"
 
-typedef struct	s_stack
+typedef struct s_stack
 {
 	int				i;
 	struct s_stack	*next;
-	
 }	t_stack;
 
-typedef struct	s_ps
+typedef struct s_ps
 {
 	t_stack	*a;
 	t_stack	*b;

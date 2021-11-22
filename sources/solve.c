@@ -14,7 +14,7 @@
 
 static void	radix_sort(t_ps *push);
 static void	three_sort(t_ps *push);
-static void mini_sort(t_ps *push);
+static void	mini_sort(t_ps *push);
 
 void	solve(t_ps *push)
 {
@@ -60,7 +60,7 @@ static void	three_sort(t_ps *push)
 		rra(push);
 }
 
-static void mini_sort(t_ps *push)
+static void	mini_sort(t_ps *push)
 {
 	int	j;
 

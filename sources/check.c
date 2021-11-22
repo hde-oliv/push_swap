@@ -61,7 +61,7 @@ static void	check_int_extremes(char **args, int size)
 
 static void	check_duplicates(char **args, int size)
 {
-	int i;
+	int	i;
 	int	j;
 	int	*tmp;
 
