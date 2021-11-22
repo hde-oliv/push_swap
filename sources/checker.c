@@ -52,22 +52,3 @@ void	check_repeated_numbers(int **stack, int stack_size)
 		i++;
 	}
 }
-
-void	xpto(char **args, int size)
-{
-	int	i;
-	int	k;
-
-	i = 1;
-	while (i < size)
-	{
-		k = 1;
-		while (k < size)
-		{
-			if (args[i] == args[k])
-				err();
-			k++;
-		}
-		i++;
-	}
-}
