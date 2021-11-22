@@ -15,6 +15,7 @@ int	find_smallest_number(t_stack *stack)
 	{
 		array[i] = stack->i;
 		stack = stack->next;
+		i++;
 	}
 	i = 0;
 	smallest = array[0];

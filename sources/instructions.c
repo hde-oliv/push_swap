@@ -17,7 +17,7 @@ void	pb(t_ps *push)
 {
 	t_stack	*tmp;
 
-	if (stack_size(push->a) < 2)
+	if (push->a == NULL)
 		return ;
 	tmp = push->a;
 	push->a = push->a->next;
@@ -29,11 +29,11 @@ void	pa(t_ps *push)
 {
 	t_stack	*tmp;
 
-	if (stack_size(push->b) < 2)
+	if (push->b == NULL)
 		return ;
 	tmp = push->b;
 	push->b = push->b->next;
-	stack_add_front(&(push->b), tmp);
+	stack_add_front(&(push->a), tmp);
 	write(1, "pa\n", 3);
 }
 
@@ -43,6 +43,7 @@ void	ra(t_ps *push)
 
 	tmp = push->a;
 	push->a = push->a->next;
+	tmp->next = NULL;
 	stack_add_back(&(push->a), tmp);
 	write(1, "ra\n", 3);
 }
@@ -58,5 +59,5 @@ void	rra(t_ps *push)
 	j = i->next;
 	i->next = NULL;
 	stack_add_front(&(push->a), j);
-	write(1, "rra\n", 3);
+	write(1, "rra\n", 4);
 }

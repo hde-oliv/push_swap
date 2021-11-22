@@ -28,8 +28,8 @@ static void	check_invalid_arguments(char **args, int size)
 
 static void	check_int_extremes(char **args, int size)
 {
-	int	i;
-	int	j;
+	int			i;
+	long long	j;
 
 	i = 0;
 	while (i < size)
@@ -41,6 +41,7 @@ static void	check_int_extremes(char **args, int size)
 			exit_with_error();
 		else if (j < -2147483648)
 			exit_with_error();
+		i++;
 	}
 }
 

@@ -53,7 +53,7 @@ static void mini_sort(t_ps *push)
 	int	j;
 
 	j = 0;
-	while (stack_size(push->a) > 4)
+	while (stack_size(push->a) >= 4)
 	{
 		j = find_smallest_number(push->a);
 		if (j == 0)
@@ -85,7 +85,7 @@ static void	radix_sort(t_ps *push)
 				ra(push);
 			i++;
 		}
-		while (push->b != NULL)
+		while (stack_size(push->b) != 0)
 			pa(push);
 		j++;
 	}
