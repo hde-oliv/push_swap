@@ -2,22 +2,72 @@
 
 static void	radix_sort(t_ps *push);
 static void	three_sort(t_ps *push);
+static void mini_sort(t_ps *push);
 
 void	solve(t_ps *push)
 {
-	if (push->size <= 3)
+	if (is_sorted(push->a))
+		return ;
+	if (push->size < 4)
 		three_sort(push);
-	else if (push->size <= 10)
-	{
-		// TODO: a good sort for small numbers
-	}
+	else if (push->size < 7)
+		mini_sort(push);
 	else
 		radix_sort(push);
 }
 
 static void	three_sort(t_ps *push)
 {
-	// TODO
+	int	first;
+	int	second;
+	int	third;
+
+	first = push->a->i;
+	second = push->a->next->i;
+	third = push->a->next->next->i;
+	if (first < second && second < third)
+		return ;
+	else if (first < second && second > third)
+	{
+		rra(push);
+		sa(push);
+	}
+	else if (first > second && second > third)
+	{
+		sa(push);
+		rra(push);
+	}
+	else if (first > second && second < third && first < third)
+		sa(push);
+	else if (first > second && second < third && first > third)
+	{
+		rra(push);
+		rra(push);
+	}
+	else
+		rra(push);
+}
+
+static void mini_sort(t_ps *push)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (stack_size(push->a) > 4)
+	{
+		j = find_smallest_number(push->a);
+		if (j == 0)
+			pb(push);
+		else if (j <= (push->size / 2))
+			ra(push);
+		else if (j > (push->size / 2))
+			rra(push);
+	}
+	three_sort(push);
+	while (stack_size(push->b) != 0)
+		pa(push);
 }
 
 static void	radix_sort(t_ps *push)
@@ -26,7 +76,7 @@ static void	radix_sort(t_ps *push)
 	int	j;
 
 	j = 0;
-	// TODO: is_sorted "while (!is_sorted(push))"
+	while (!is_sorted(push->a))
 	{
 		i = 0;
 		while (i < push->size)
