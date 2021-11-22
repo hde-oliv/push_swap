@@ -14,7 +14,7 @@ CC		:=	clang
 CFLAGS	+=	-Wall -Wextra -Werror
 IFLAGS	+=	-I.
 LFLAGS	+=	-L.
-TFLAGS	+=	-g
+TFLAGS	+=	-g -fsanitize=address
 MFLAGS	+=	-lft
 
 RM		:=	rm -rf
