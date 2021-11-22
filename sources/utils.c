@@ -46,6 +46,7 @@ int	is_sorted(t_stack *stack)
 	{
 		array[i] = stack->i;
 		stack = stack->next;
+		i++;
 	}
 	i = size - 1;
 	while (i != 0)
