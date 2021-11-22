@@ -50,10 +50,8 @@ static void	three_sort(t_ps *push)
 
 static void mini_sort(t_ps *push)
 {
-	int	i;
 	int	j;
 
-	i = 0;
 	j = 0;
 	while (stack_size(push->a) > 4)
 	{
