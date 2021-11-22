@@ -14,4 +14,41 @@
 # define PUSH_SWAP_H
 # include "libft.h"
 
+typedef struct	s_stack
+{
+	int				i;
+	struct s_stack	*next;
+	
+}	t_stack;
+
+typedef struct	s_ps
+{
+	t_stack	*a;
+	t_stack	*b;
+	int		size;
+}	t_ps;
+
+/* Main Methods */
+void	check(char **args, int size);
+void	construct(t_ps *push, char **args, int size);
+void	solve(t_ps *push);
+void	clear(t_ps *push);
+
+/* Stack Methods */
+t_stack	*stack_new(int number);
+void	stack_add_back(t_stack **stack, t_stack *new);
+void	stack_add_front(t_stack **stack, t_stack *new);
+t_stack	*stack_last(t_stack *node);
+int		stack_size(t_stack *stack);
+
+/* Push Swap Instructions */
+void	sa(t_ps *push);
+void	pb(t_ps *push);
+void	pa(t_ps *push);
+void	ra(t_ps *push);
+void	rra(t_ps *push);
+
+/* Error Handling */
+void	exit_with_error(void);
+
 #endif
