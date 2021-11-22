@@ -84,6 +84,7 @@ void	three_sort(int *a, int a_size)
 	{
 		rra(&a, a_size);
 		rra(&a, a_size);
+		sa(&a, a_size);
 	}
 	else
 		ra(&a, a_size);
