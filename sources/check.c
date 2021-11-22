@@ -8,6 +8,8 @@ static void	check_int_extremes(char **args, int size);
 
 void	check(char **args, int size)
 {
+	if (size == 0)
+		exit_with_error();
 	check_invalid_arguments(args, size);
 	check_int_extremes(args, size);
 	check_duplicates(args, size);
