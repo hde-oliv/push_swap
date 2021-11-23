@@ -46,31 +46,22 @@ static void	simplify_array(int **array, int size)
 	int	*new;
 	int	*tmp;
 
-	i = 0;
 	new = (int *)malloc(sizeof(int) * size);
 	if (!new)
 		exit_with_error();
-	while (i < size)
-	{
+	i = -1;
+	while (++i < size)
 		new[i] = (*array)[i];
-		i++;
-	}
-	i = 0;
 	tmp = (int *)malloc(sizeof(int) * size);
 	if (!tmp)
 		exit_with_error();
-	while (i < size)
-	{
+	i = -1;
+	while (++i < size)
 		tmp[i] = (*array)[i];
-		i++;
-	}
 	bubble_sort(&new, size);
-	i = 0;
-	while (i < size)
-	{
+	i = -1;
+	while (++i < size)
 		(*array)[find_number_index(tmp, size, new[i])] = i;
-		i++;
-	}
 	free(new);
 	free(tmp);
 }

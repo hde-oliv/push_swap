@@ -65,17 +65,14 @@ static void	check_duplicates(char **args, int size)
 	int	j;
 	int	*tmp;
 
-	i = 0;
+	i = -1;
 	tmp = (int *) ft_calloc(size, sizeof(int));
 	if (!tmp)
 		exit_with_error();
-	while (i < size)
-	{
+	while (++i < size)
 		tmp[i] = ft_atoi(args[i]);
-		i++;
-	}
-	i = 0;
-	while (i < size)
+	i = -1;
+	while (++i < size)
 	{
 		j = i + 1;
 		while (j < size)
@@ -87,7 +84,6 @@ static void	check_duplicates(char **args, int size)
 			}
 			j++;
 		}
-		i++;
 	}
 	free(tmp);
 }
