@@ -68,7 +68,7 @@ static void	mini_sort(t_ps *push)
 	j = 0;
 	while (stack_size(push->a) >= 4)
 	{
-		j = find_smallest_number(push->a);
+		j = find_smallest_number(push->a, stack_size(push->a));
 		if (j == 0)
 			pb(push);
 		else if (j <= (push->size / 2))

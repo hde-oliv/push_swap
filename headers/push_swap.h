@@ -51,7 +51,7 @@ void	rra(t_ps *push);
 void	exit_with_error(void);
 
 /* Utils */
-int		find_smallest_number(t_stack *stack);
+int		find_smallest_number(t_stack *stack, int size);
 int		is_sorted(t_stack *stack);
 
 #endif
