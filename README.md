@@ -1,7 +1,4 @@
-<div align="center">
-</div>
-<div align="center">
-</div>
+# Push Swap
 
 ## What it is
 This project consists on a binary called push_swap that sorts a passed array of numbers (without duplicates and of 32 bits) using only  
